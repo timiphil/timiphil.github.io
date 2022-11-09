@@ -58,22 +58,40 @@ section {
 .sec1 {
  display: none;
  transform: translateY(0) scale(1);
+ background-color: rgb(215, 230, 84); 
 }
 .sec2 {
  display: none;
  transform: translateY(0) scale(1);
+ background-color: slateblue;
 }
 .sec3 {
  display: none;
  transform: translateY(0) scale(1);
+ background-color: rgb(90, 205, 94);
 }
 .sec4 {
  display: none;
  transform: translateY(0) scale(1);
+ background-color: rgb(194, 90, 205);
 }
 .sec5 {
  display: none;
  transform: translateY(0) scale(1);
+}
+
+.active {
+  display: block; 
+  animation: scaleAnim 1s ease-in-out;
+  @keyframes scaleAnim {
+     0% {
+          transform: translateY(-100%) scaleY(0)
+        }
+
+     100% {
+          transform: translateY(0) scaleY(1)
+          }
+  }
 }
 
 // styling controls
@@ -82,7 +100,7 @@ section {
   z-index: 10;
   top: 50%;
   right: 3%;
-   display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
