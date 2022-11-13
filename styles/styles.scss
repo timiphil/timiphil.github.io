@@ -315,6 +315,7 @@ section {
   position: relative;
   &::before {
     content: "";
+    position: absolute;
     width: 40%;
     height: 1px;
     top: 0;
@@ -375,7 +376,83 @@ section {
   }
 }
 
-/* independed btn components */
+/* styling my Portfolio */
+.port-text {
+    text-align: center;
+    padding: 2rem 0;
+}
+.portfolios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    margin-top: 3rem;
+    .portfolio-item {
+      position: relative;
+      img {
+          width: 100%;
+          height: 300px;
+          border-radius: 15px;
+          object-fit: cover;
+      }
+      .hover-items {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          background-color: var(--color-secondary);
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-radius: 15px;
+          opacity: 0;
+          transform: scale(0);
+          transition: var(--ease-in-out);
+          h3 {
+              font-size: 1.5rem;
+              margin-bottom: 1.5rem;
+              color: var(--color-white);
+          }
+          .icons {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              .icon {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  margin: 0 1rem;
+                  width: 50px;
+                  height: 50px;
+                  border-radius: 50%;
+                  background-color: var(--color-primary);
+                  cursor: pointer;
+                  transition: var(--ease-in-out);
+                  i {
+                      font-size: 1.5rem;
+                      margin: 0 1rem;
+                      color: var(--color-white);   
+                  }
+                  &:hover {
+                        background-color: var(--color-white);
+                        i {
+                            color: var(--color-primary);
+                        }
+
+                  }
+              }
+          }
+      }
+    }
+}
+.portfolio-item:hover .hover-items {
+      opacity: 1;
+      transform: scale(1);
+}
+
+
+/* independent btn components */
 .btn-con {
   display: flex;
   align-self: flex-start;
