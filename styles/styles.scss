@@ -451,6 +451,94 @@ section {
       transform: scale(1);
 }
 
+/* styling blog section */
+.blogs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-top: 3rem;
+  .blog {
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 1px 1px 21px rgba(0, 0, 0, 0.1);
+    transition: var(--ease-in-out);
+    background-color: var(--color-grey-5);
+    &:hover {
+          box-shadow: 1px 1px 21px rgba(0, 0, 0, 0.3);
+          transform: translateY(-5px);
+          transition: var(--ease-in-out);
+          img {
+              filter: grayscale(0);
+              transform: scale(1.1);
+              box-shadow: 0px 4px 21px rgba(0, 0, 0, 0.8);
+          }
+    }
+    img {
+          width: 100%;
+          height: 300px;
+          object-fit: cover;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+          filter: grayscale(100%);
+          transition: var(--ease-in-out);
+    }
+    .blog-text {
+      margin-top: -8px;
+      padding: 1.2rem;
+      border-top: 9px solid var(--color-secondary);
+      h4 {
+        font-size: 1.5rem;
+        margin-bottom: 0.8rem;
+        transition: var(--ease-in-out);
+        cursor: pointer;
+        &:hover {
+            color: var(--color-secondary);
+        }
+      }
+      p {
+          color: var(--color-grey-2);
+          line-height: 2rem;
+          padding-bottom: 1rem;
+      }
+    }
+  }
+}
+
+/* styling contact section */
+.contact-content-con {
+  display: flex;
+  padding-top: 3.5rem;
+  .left-contact {
+      flex: 2;
+  }
+  .right-contact {
+      flex: 3;
+      margin-left: 3rem;
+      .input-control {
+        margin: 1.5rem 0;
+        input, textarea {
+          font-size: inherit;
+          font-weight: inherit;
+          font-family: inherit;
+          border-radius: 30px;
+          padding: 0.8rem 1.2rem;
+          border: none;
+          outline: none;
+          width: 100%;
+          background-color: var(--color-grey-5);
+          color: var(--color-white);
+          resize: none;
+        }
+      }
+      .inp-con-2 {
+        display: flex;
+        // make sure to fix this last child
+        :last-child {
+            margin-left: 2rem;
+        }
+      }
+  }
+}
 
 /* independent btn components */
 .btn-con {
