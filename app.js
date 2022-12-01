@@ -39,6 +39,16 @@ function pageSwitches() {
       let element = document.body;
       element.classList.toggle("light-mode");
    })
+
+   /* toggle */
+   // const toggle = document.getElementById("toggle");
+   // const nav = document.getElementById("nav");
+
+   // toggle.addEventListener("click", () => nav.classList.toggle("active"));
+
+let encEmail = "dGltaXBoaWxAZ21haWwuY29t";
+const form = document.getElementById("email");
+form.setAttribute("href", "mailto:".concat(atob(encEmail)));
 }
 
 console.log(pageSwitches());

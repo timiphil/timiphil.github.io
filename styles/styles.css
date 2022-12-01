@@ -592,6 +592,9 @@ section {
   align-items: center;
   font-size: 1.3rem;
 }
+.contact-content-con .left-contact .contact-info .contact-item #email {
+  color: var(--color-secondary);
+}
 .contact-content-con .left-contact .contact-icon {
   display: flex;
   margin-top: 2rem;
