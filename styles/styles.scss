@@ -38,11 +38,11 @@
 }
 
 body {
- background-color: var(--color-primary);
- font-family: 'Poppins', sans-serif;
- font-size: 1.1rem;
- color: var(--color-white);
- transition: var(--ease-in-out);
+  background-color: var(--color-primary);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  color: var(--color-white);
+  transition: var(--ease-in-out);
 }
 
 a {
@@ -221,9 +221,14 @@ section {
     flex-direction: column;
     justify-content: center;
     padding-right: 18rem;
+    letter-spacing: normal;
     .name {
       font-size: 3rem;
       // I need to animate the span
+      h1::before {
+          content: "Hi, I'm";
+          position: absolute;
+        }
       span {
           color: var(--color-secondary);
           // background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);

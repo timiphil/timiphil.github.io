@@ -1,5 +1,8 @@
 // media at 600px
 @media screen and (max-width: 600px) {
+      .right-header {
+         margin-top: 2rem !important; 
+      }
       .about-container {
          grid-template-columns: 1fr;
          .right-about {
