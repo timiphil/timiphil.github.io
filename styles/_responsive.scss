@@ -1,8 +1,8 @@
 // media at 600px
 @media screen and (max-width: 600px) {
-      .right-header {
-         margin-top: 2rem !important; 
-      }
+      // .right-header {
+      //    margin-top: 2rem !important; 
+      // }
       .about-container {
          grid-template-columns: 1fr;
          .right-about {
@@ -31,6 +31,9 @@
       }
       .contact-content-con {
          flex-direction: column;
+         .contact-icons {
+            padding: 5em 0 !important;
+         }
          .right-contact {
                margin-left: 0;
                margin-top: 2.5rem;
