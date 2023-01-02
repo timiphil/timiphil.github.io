@@ -983,7 +983,7 @@ section {
     padding: 0;
   }
   header .right-header {
-    padding: 0 !important;
+    padding: 2rem !important;
   }
   .header-content {
     grid-template-columns: 1fr;
@@ -999,6 +999,7 @@ section {
   }
   .right-header .name {
     font-size: 2.5rem !important;
+    padding-top: 2rem !important;
   }
   .header-content .left-header .image {
     margin: 0 auto;

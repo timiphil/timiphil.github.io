@@ -1,8 +1,5 @@
 // media at 600px
 @media screen and (max-width: 600px) {
-      // .right-header {
-      //    margin-top: 2rem !important; 
-      // }
       .about-container {
          grid-template-columns: 1fr;
          .right-about {
@@ -88,14 +85,14 @@
             }
          
             header .right-header {
-               padding: 0 !important;
+               padding: 2rem !important;
             }
          
             .header-content {
                grid-template-columns: 1fr;
                padding-bottom: 4rem;
             }
-         
+
             .left-header {
                .h-shape {
                   display: none;
@@ -106,9 +103,9 @@
                grid-row: 1;
                width: 90%;
                margin: 0 auto;
-         
                .name {
                   font-size: 2.5rem !important;
+                  padding-top: 2rem !important;
                }
             }
          
