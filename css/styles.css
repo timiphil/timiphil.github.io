@@ -905,6 +905,17 @@ section {
   font-weight: 800;
 }
 
+@media screen and (max-width: 400px) {
+  .about-container {
+    padding-top: 2.5rem;
+  }
+  .controls {
+    overflow: hidden !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+}
 @media screen and (max-width: 600px) {
   .about-container {
     grid-template-columns: 1fr;
@@ -977,6 +988,10 @@ section {
   .main-title h2 {
     font-size: 3rem;
   }
+  .controls {
+    position: fixed;
+    padding-bottom: 3rem !important;
+  }
 }
 @media screen and (max-width: 950px) {
   header {
@@ -1022,6 +1037,9 @@ section {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -1029,7 +1047,7 @@ section {
     background-color: var(--color-grey-5);
   }
   .controls .control {
-    margin: 0.5rem 1.5rem;
+    margin: 0.5rem 2.5rem;
   }
 }
 @media screen and (max-width: 1070px) {
