@@ -183,6 +183,7 @@ section {
   font-size: 1.2rem;
   color: var(--color-grey-2);
   pointer-events: none;
+  margin: 0 auto;
 }
 
 /* styling the theme */
@@ -248,15 +249,15 @@ section {
           clip-path: polygon(6% 0, 97% 0, 87% 28%, 70% 74%, 60% 100%, 0 100%, 0% 80%, 0 8%);
 }
 .header-content .left-header .image {
-  width: 70%;
-  height: 85%;
+  width: 50%;
+  height: 65%;
   margin: 4rem;
   -webkit-transition: var(--ease-in-out);
   transition: var(--ease-in-out);
 }
 .header-content .left-header .image img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-transition: var(--ease-in-out);
