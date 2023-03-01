@@ -183,7 +183,6 @@ section {
   font-size: 1.2rem;
   color: var(--color-grey-2);
   pointer-events: none;
-  margin: 0 auto;
 }
 
 /* styling the theme */
@@ -274,15 +273,20 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-right: 18rem;
   letter-spacing: normal;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .header-content .right-header .name {
   font-size: 3rem;

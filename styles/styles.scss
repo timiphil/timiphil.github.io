@@ -142,7 +142,7 @@ section {
         font-size: 1.2rem;
         color: var(--color-grey-2);
         pointer-events: none;
-        margin: 0 auto;
+    
         // display: inline-block !important;
         // text-align: center !important;
         }
@@ -222,10 +222,12 @@ section {
 
   .right-header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
     padding-right: 18rem;
     letter-spacing: normal;
+    flex-wrap: wrap;
     .name {
       font-size: 3rem;
       // I need to animate the span
