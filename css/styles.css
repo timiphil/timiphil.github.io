@@ -365,11 +365,16 @@ section {
 }
 .about-container .left-about {
   padding-right: 5rem;
+  max-width: 400px;
 }
 .about-container .left-about p {
   line-height: 2rem;
   padding: 1rem;
   color: var(--color-grey-1);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
 }
 .about-container .left-about h4 {
   font-size: 2rem;
@@ -423,24 +428,6 @@ section {
   background-color: var(--color-secondary);
   -webkit-transition: var(--ease-in-out);
   transition: var(--ease-in-out);
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .html {
-  width: 80%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .css {
-  width: 85%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .js {
-  width: 50%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .react {
-  width: 20%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .node {
-  width: 25%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .angular {
-  width: 15%;
 }
 
 .stat-title {

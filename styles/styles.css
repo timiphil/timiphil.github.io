@@ -151,7 +151,7 @@ section {
   box-shadow: var(--box-shadow-1);
 }
 .controls .control i {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: var(--color-grey-2);
   pointer-events: none;
 }

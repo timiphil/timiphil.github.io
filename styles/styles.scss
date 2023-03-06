@@ -326,10 +326,15 @@ section {
 
     .left-about {
       padding-right: 5rem;
+      max-width: 400px;
       p {
           line-height: 2rem;
           padding: 1rem;
           color: var(--color-grey-1);
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 200px;
       }
       h4 {
           font-size: 2rem;
@@ -371,24 +376,24 @@ section {
                 background-color: var(--color-secondary);
                 transition: var(--ease-in-out);
               }
-              .html {
-                width: 80%;
-              }
-              .css {
-                width: 85%;
-              }
-              .js {
-                width: 50%;
-              }
-              .react {
-                width: 20%;
-              }
-              .node {
-                width: 25%;
-              }
-              .angular {
-                width: 15%;
-              }
+              // .html {
+              //   width: 80%;
+              // }
+              // .css {
+              //   width: 85%;
+              // }
+              // .js {
+              //   width: 50%;
+              // }
+              // .react {
+              //   width: 20%;
+              // }
+              // .node {
+              //   width: 25%;
+              // }
+              // .angular {
+              //   width: 15%;
+              // }
             }
           }
         }
