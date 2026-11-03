@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rotimi Ishola — Cybersecurity</title>
+<meta name="description" content="Rotimi Ishola — Cybersecurity Analyst (SOC & Detection). Short bio, certifications, skills, and security write-ups.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#191d2b;            /* matches timiphil.github.io body */
+    --panel:#12181b;         /* site --color-grey-6, dark cards */
+    --surface:#1f2433;       /* subtle lift for separation */
+    --border:rgba(255,255,255,.08);
+    --text:#ffffff;
+    --muted:#8a94a6;
+    --accent:#27acae;        /* site --color-secondary (teal) */
+    --accent-2:#1d8486;
+    --radius:14px;           /* site --br-sm-2 */
+    --shadow:0 3px 15px rgba(0,0,0,.3);  /* site --box-shadow-1 */
+    --font:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--font);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    padding:0 18px 80px;
+  }
+  .wrap{width:100%;max-width:760px;margin:0 auto}
+  a{color:inherit}
+
+  /* nav */
+  nav{
+    max-width:760px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;
+    padding:22px 0 8px;flex-wrap:wrap;gap:10px;
+  }
+  .brand{font-weight:700;font-size:16px;letter-spacing:.2px}
+  .brand .dot{color:var(--accent)}
+  .navlinks{display:flex;gap:20px;font-size:14px}
+  .navlinks a{color:var(--muted);text-decoration:none;transition:color .3s ease}
+  .navlinks a:hover{color:var(--accent)}
+
+  /* hero */
+  header.hero{text-align:center;padding:48px 0 10px}
+  .avatar{
+    width:96px;height:96px;border-radius:50%;margin:0 auto 22px;
+    display:flex;align-items:center;justify-content:center;
+    background:var(--panel);border:1px solid var(--border);
+    font-weight:700;font-size:34px;color:var(--accent);
+    box-shadow:var(--shadow);
+  }
+  .hero h1{font-size:32px;font-weight:700;letter-spacing:-.01em;line-height:1.2}
+  .hero h1 .accent{color:var(--accent)}
+  .hero .role{font-size:15px;color:var(--muted);margin-top:10px}
+  .hero .loc{font-size:13px;color:var(--muted);margin-top:4px}
+  .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+  .btn{
+    font-size:14px;font-weight:500;text-decoration:none;padding:10px 20px;border-radius:var(--radius);
+    border:1px solid var(--border);background:var(--panel);color:var(--text);
+    transition:all .4s ease-in-out;box-shadow:var(--shadow);
+  }
+  .btn:hover{border-color:var(--accent);color:var(--accent)}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:#06211f;font-weight:600}
+  .btn.primary:hover{background:var(--accent-2);border-color:var(--accent-2);color:#eafffe}
+
+  /* sections */
+  section{margin-top:56px}
+  .label{
+    font-size:13px;text-transform:uppercase;letter-spacing:.14em;color:var(--accent);
+    font-weight:600;margin:0 2px 20px;display:flex;align-items:center;gap:10px;
+  }
+  .label::after{content:"";flex:1;height:1px;background:var(--border)}
+
+  .about p{color:#d6dbe3;font-size:16px}
+  .about p + p{margin-top:14px}
+
+  /* skills */
+  .skillgroup{margin-bottom:20px}
+  .skillgroup h3{font-size:14px;font-weight:600;color:#fff;margin-bottom:11px}
+  .chips{display:flex;flex-wrap:wrap;gap:9px}
+  .chip{
+    font-size:13px;color:#cdd4de;background:var(--panel);
+    border:1px solid var(--border);border-radius:9px;padding:6px 12px;
+  }
+
+  /* certs */
+  .certlist{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .cert{
+    background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);
+    padding:14px 16px;display:flex;justify-content:space-between;gap:10px;align-items:baseline;
+    box-shadow:var(--shadow);
+  }
+  .cert .name{font-size:14px;font-weight:500}
+  .cert .yr{font-size:13px;color:var(--accent);font-weight:600}
+  .inprogress{
+    margin-top:16px;font-size:14px;color:var(--muted);
+    background:var(--panel);border:1px dashed var(--border);border-radius:var(--radius);padding:14px 16px;
+  }
+  .inprogress b{color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:12px}
+
+  /* writing cards */
+  .card{
+    display:block;background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);
+    padding:17px 20px;margin-bottom:14px;text-decoration:none;color:var(--text);
+    box-shadow:var(--shadow);transition:all .4s ease-in-out;
+  }
+  a.card:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .card-title{font-weight:600;font-size:15px;line-height:1.4}
+  .card-meta{font-size:13px;color:var(--muted);margin-top:8px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .pill{color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:1px 9px;font-size:11px;font-weight:500}
+
+  /* connect — circular icon buttons, echoing the main site */
+  .socials{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:4px}
+  .social{
+    width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    background:var(--panel);border:1px solid var(--border);color:#fff;text-decoration:none;
+    box-shadow:var(--shadow);transition:all .4s ease-in-out;
+  }
+  .social:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+  .social svg{width:20px;height:20px;fill:currentColor}
+
+  footer{text-align:center;margin-top:60px;color:var(--muted);font-size:13px}
+
+  @media (max-width:560px){
+    .certlist{grid-template-columns:1fr}
+    .navlinks{display:none}
+    .hero h1{font-size:27px}
+  }
+  @media (prefers-color-scheme: light){ body{background:var(--bg)} }
+</style>
+</head>
+<body>
+
+  <nav>
+    <div class="brand">rotimi<span class="dot">.</span>ishola</div>
+    <div class="navlinks">
+      <a href="#about">about</a>
+      <a href="#skills">skills</a>
+      <a href="#certs">certs</a>
+      <a href="#writing">writing</a>
+    </div>
+  </nav>
+
+  <div class="wrap">
+
+    <!-- ===================== HERO ===================== -->
+    <header class="hero">
+      <div class="avatar">RI</div>
+      <h1>Rotimi Ishola — <span class="accent">Cybersecurity Analyst</span></h1>
+      <div class="role">SOC &amp; Detection · threat hunting · security write-ups</div>
+      <div class="loc">Düsseldorf, Germany</div>
+      <div class="cta">
+        <a class="btn primary" href="#writing">Read my writing</a>
+        <a class="btn" href="https://www.linkedin.com/in/rotimi-ishola/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/Timiphil" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </header>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about" class="about">
+      <div class="label">About</div>
+      <p>I'm a cybersecurity analyst focused on SOC operations and detection engineering. My day-to-day lives on the blue side — triaging alerts, validating IOCs, and investigating in Splunk and QRadar — but I spend just as much time with offensive tooling, because the fastest way to catch an attack is to understand how it's run.</p>
+      <p>I build detection tooling in C++ and Python, and I write hands-on security walkthroughs that pair each attacker step with what it leaves behind for defenders. Always learning, always shipping.</p>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section id="skills">
+      <div class="label">Skills</div>
+
+      <div class="skillgroup">
+        <h3>SOC / SIEM &amp; detection</h3>
+        <div class="chips">
+          <span class="chip">Splunk ES (SPL, dashboards, alerting)</span>
+          <span class="chip">IBM QRadar</span>
+          <span class="chip">CrowdStrike EDR</span>
+          <span class="chip">Alert triage</span>
+          <span class="chip">Incident response</span>
+          <span class="chip">IOC validation</span>
+          <span class="chip">TheHive</span>
+        </div>
+      </div>
+
+      <div class="skillgroup">
+        <h3>Security &amp; detection engineering</h3>
+        <div class="chips">
+          <span class="chip">C++17 detection engines</span>
+          <span class="chip">Python</span>
+          <span class="chip">Bash</span>
+          <span class="chip">libFuzzer / fuzz testing</span>
+          <span class="chip">CI/CD (GitHub Actions, Azure DevOps)</span>
+        </div>
+      </div>
+
+      <div class="skillgroup">
+        <h3>Offensive / vulnerability</h3>
+        <div class="chips">
+          <span class="chip">Nmap</span>
+          <span class="chip">Burp Suite</span>
+          <span class="chip">Metasploit</span>
+          <span class="chip">Nessus</span>
+          <span class="chip">OpenVAS</span>
+          <span class="chip">Kali Linux</span>
+          <span class="chip">CVE / CVSS analysis</span>
+        </div>
+      </div>
+
+      <div class="skillgroup">
+        <h3>Cloud &amp; network</h3>
+        <div class="chips">
+          <span class="chip">Microsoft Azure (VMs, Entra ID/IAM, VNet, VMSS)</span>
+          <span class="chip">Active Directory &amp; GPO</span>
+          <span class="chip">TCP/IP · OSI</span>
+          <span class="chip">Wireshark / PCAP</span>
+          <span class="chip">Firewalls · VPN · IDS/IPS</span>
+        </div>
+      </div>
+
+      <div class="skillgroup">
+        <h3>Frameworks</h3>
+        <div class="chips">
+          <span class="chip">MITRE ATT&amp;CK</span>
+          <span class="chip">NIST CSF / 800-53</span>
+          <span class="chip">ISO 27001</span>
+          <span class="chip">BSI IT-Grundschutz</span>
+          <span class="chip">OWASP Top 10</span>
+          <span class="chip">CIS Controls</span>
+          <span class="chip">NIS2 · DORA · DSGVO</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CERTIFICATIONS ===================== -->
+    <section id="certs">
+      <div class="label">Certifications</div>
+      <div class="certlist">
+        <div class="cert"><span class="name">CompTIA Security+ (SY0-701)</span><span class="yr">2025</span></div>
+        <div class="cert"><span class="name">CRANIUM AI Security Professional</span><span class="yr">2026</span></div>
+        <div class="cert"><span class="name">Cisco Endpoint Security</span><span class="yr">2026</span></div>
+        <div class="cert"><span class="name">Splunk — Investigation &amp; SIEM Ops</span><span class="yr">2025</span></div>
+        <div class="cert"><span class="name">TryHackMe SOC Level 1</span><span class="yr">2025</span></div>
+        <div class="cert"><span class="name">CI/CD &amp; DevOps Foundations</span><span class="yr">2024</span></div>
+      </div>
+      <div class="inprogress"><b>In progress</b> &nbsp;·&nbsp; CompTIA CySA+ · Microsoft SC-200 · GIAC GCTI · eJPT · CompTIA PenTest+</div>
+    </section>
+
+    <!-- ===================== WRITING =====================
+         Keep in sync with links.html. Newest first.
+         Add an article: copy a card, paste at the top, update href/title/meta.
+    -->
+    <section id="writing">
+      <div class="label">Writing</div>
+
+      <a class="card" href="https://medium.com/the-ink-home/metasploit-the-basics-tryhackme-walkthrough-daaea08006a8?sharedUserId=timiphil9" target="_blank" rel="noopener">
+        <div class="card-title">Metasploit: The Basics — TryHackMe Walkthrough</div>
+        <div class="card-meta"><span class="pill">Featured</span> The Ink Home · blue-team detection angle</div>
+      </a>
+
+      <a class="card" href="https://medium.com/@timiphil9/talking-a-calendar-bot-into-leaking-sales-data-tryhackme-llmborghini-walkthrough-ef35a564851b?sharedUserId=timiphil9" target="_blank" rel="noopener">
+        <div class="card-title">Talking a Calendar Bot Into Leaking Sales Data — LLMborghini Walkthrough</div>
+        <div class="card-meta">Medium · LLM prompt-injection</div>
+      </a>
+
+      <a class="card" href="https://medium.com/@timiphil9/php2shell-how-a-progress-bar-became-unauthenticated-rce-on-14-years-of-php-b21d90a4fd6b?sharedUserId=timiphil9" target="_blank" rel="noopener">
+        <div class="card-title">PHP2Shell: How a Progress Bar Became Unauthenticated RCE on 14 Years of PHP</div>
+        <div class="card-meta">Medium · CVE-2026-109618/109619</div>
+      </a>
+
+      <a class="card" href="https://medium.com/the-repo/tryhackme-prompt-defence-walkthrough-why-you-cant-patch-prompt-injection-2a3d6e3edd15?sharedUserId=timiphil9" target="_blank" rel="noopener">
+        <div class="card-title">Why You Can't Patch Prompt Injection — Prompt Defence Walkthrough</div>
+        <div class="card-meta">The Repo · LLM security</div>
+      </a>
+
+      <a class="card" href="https://medium.com/@timiphil9/what-i-learned-by-building-a-security-log-analysis-engine-in-c-df35dbf7559b?sharedUserId=timiphil9" target="_blank" rel="noopener">
+        <div class="card-title">What I Learned by Building a Security Log Analysis Engine in C++</div>
+        <div class="card-meta">Medium · Sentinel Log Core</div>
+      </a>
+
+      <a class="card" href="https://medium.com/@timiphil9" target="_blank" rel="noopener">
+        <div class="card-title">All articles on Medium →</div>
+        <div class="card-meta">Full archive</div>
+      </a>
+    </section>
+
+    <!-- ===================== CONNECT ===================== -->
+    <section id="connect">
+      <div class="label">Connect</div>
+      <div class="socials">
+        <a class="social" href="https://www.linkedin.com/in/rotimi-ishola/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 18.34V9.99H5.67v8.35h2.67zM7 8.8a1.55 1.55 0 1 0 0-3.1 1.55 1.55 0 0 0 0 3.1zm11.34 9.54v-4.6c0-2.46-1.31-3.6-3.06-3.6-1.41 0-2.04.78-2.39 1.32v-1.13h-2.67c.04.75 0 8.35 0 8.35h2.67v-4.66c0-.24.02-.48.09-.65.19-.48.63-.98 1.37-.98.97 0 1.35.74 1.35 1.81v4.48h2.64z"/></svg>
+        </a>
+        <a class="social" href="https://github.com/Timiphil" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85l-.01 2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
+        </a>
+        <a class="social" href="https://medium.com/@timiphil9" target="_blank" rel="noopener" aria-label="Medium">
+          <svg viewBox="0 0 24 24"><path d="M4.37 7.3c.02-.17-.05-.34-.18-.45L2.6 5.07V4.8h5.03l3.89 8.53 3.42-8.53H19.5v.27l-1.33 1.28a.4.4 0 0 0-.15.38v9.56a.4.4 0 0 0 .15.38l1.3 1.28v.27h-6.53v-.27l1.35-1.31c.13-.13.13-.17.13-.38V8.47l-3.75 9.54h-.5L5.77 8.47v6.4c-.04.27.06.55.25.75l1.75 2.13v.27H2.5v-.27l1.75-2.13c.2-.2.28-.48.23-.75V7.3z"/></svg>
+        </a>
+        <a class="social" href="https://x.com/Timi_phil" target="_blank" rel="noopener" aria-label="X">
+          <svg viewBox="0 0 24 24"><path d="M18.9 2H22l-7.5 8.6L23 22h-6.8l-5.3-6.9L4.8 22H1.7l8-9.2L1 2h6.9l4.8 6.3L18.9 2zm-2.4 18h1.9L7.6 4H5.6l10.9 16z"/></svg>
+        </a>
+        <a class="social" href="https://www.instagram.com/timi_phil/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><path d="M12 2c2.72 0 3.06.01 4.12.06 1.07.05 1.8.22 2.43.47.66.25 1.22.6 1.77 1.15.55.55.9 1.11 1.15 1.77.25.63.42 1.36.47 2.43.05 1.06.06 1.4.06 4.12s-.01 3.06-.06 4.12c-.05 1.07-.22 1.8-.47 2.43a4.9 4.9 0 0 1-1.15 1.77c-.55.55-1.11.9-1.77 1.15-.63.25-1.36.42-2.43.47-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.07-.05-1.8-.22-2.43-.47a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.25-.63-.42-1.36-.47-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.07.22-1.8.47-2.43.25-.66.6-1.22 1.15-1.77.55-.55 1.11-.9 1.77-1.15.63-.25 1.36-.42 2.43-.47C8.94 2.01 9.28 2 12 2zm0 1.8c-2.67 0-2.99.01-4.04.06-.98.04-1.51.21-1.86.35-.47.18-.8.4-1.15.75-.35.35-.57.68-.75 1.15-.14.35-.3.88-.35 1.86-.05 1.05-.06 1.37-.06 4.04s.01 2.99.06 4.04c.04.98.21 1.51.35 1.86.18.47.4.8.75 1.15.35.35.68.57 1.15.75.35.14.88.3 1.86.35 1.05.05 1.37.06 4.04.06s2.99-.01 4.04-.06c.98-.04 1.51-.21 1.86-.35.47-.18.8-.4 1.15-.75.35-.35.57-.68.75-1.15.14-.35.3-.88.35-1.86.05-1.05.06-1.37.06-4.04s-.01-2.99-.06-4.04c-.04-.98-.21-1.51-.35-1.86a3.1 3.1 0 0 0-.75-1.15 3.1 3.1 0 0 0-1.15-.75c-.35-.14-.88-.3-1.86-.35-1.05-.05-1.37-.06-4.04-.06zm0 3.07a5.13 5.13 0 1 1 0 10.26 5.13 5.13 0 0 1 0-10.26zm0 8.46a3.33 3.33 0 1 0 0-6.66 3.33 3.33 0 0 0 0 6.66zm6.54-8.66a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/></svg>
+        </a>
+        <a class="social" href="mailto:timiphil@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.01L4.2 6.8 3 7.6l9 6 9-6-1.2-.8L12 12.01z"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <footer>© 2026 Rotimi Ishola · Düsseldorf</footer>
+
+  </div>
+</body>
+</html>
