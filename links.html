@@ -7,94 +7,83 @@
 <meta name="description" content="Rotimi Ishola — Cybersecurity Analyst. Write-ups, socials, and work.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#0b0f14;
-    --panel:#121820;
-    --panel-hover:#18212c;
-    --border:#1e2a36;
-    --text:#e6edf3;
-    --muted:#8b98a5;
-    --accent:#36d399;
-    --accent-dim:#1f6f52;
-    --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
-    --sans:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    --bg:#191d2b;            /* matches timiphil.github.io */
+    --panel:#12181b;
+    --border:rgba(255,255,255,.08);
+    --text:#ffffff;
+    --muted:#8a94a6;
+    --accent:#27acae;        /* site teal */
+    --accent-2:#1d8486;
+    --radius:14px;
+    --shadow:0 3px 15px rgba(0,0,0,.3);
+    --font:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{
     background:var(--bg);
     color:var(--text);
-    font-family:var(--sans);
-    line-height:1.5;
+    font-family:var(--font);
+    line-height:1.6;
     -webkit-font-smoothing:antialiased;
     display:flex;
     justify-content:center;
-    padding:48px 16px 64px;
+    padding:52px 18px 72px;
     min-height:100vh;
   }
   .wrap{width:100%;max-width:560px}
 
   /* header */
-  header{text-align:center;margin-bottom:36px}
+  header{text-align:center;margin-bottom:40px}
   .avatar{
-    width:84px;height:84px;border-radius:50%;
-    margin:0 auto 18px;
+    width:90px;height:90px;border-radius:50%;
+    margin:0 auto 20px;
     display:flex;align-items:center;justify-content:center;
-    background:linear-gradient(145deg,#15202b,#0d141b);
+    background:var(--panel);
     border:1px solid var(--border);
-    font-family:var(--mono);font-weight:700;font-size:30px;
+    font-weight:700;font-size:32px;
     color:var(--accent);
-    box-shadow:0 0 0 4px rgba(54,211,153,.06);
+    box-shadow:var(--shadow);
   }
-  h1{font-size:24px;font-weight:700;letter-spacing:-.02em}
-  .role{
-    font-family:var(--mono);
-    font-size:13px;
-    color:var(--accent);
-    margin-top:6px;
-  }
-  .tagline{color:var(--muted);font-size:14px;margin-top:10px;max-width:420px;margin-left:auto;margin-right:auto}
+  h1{font-size:26px;font-weight:700;letter-spacing:-.01em}
+  .role{font-size:14px;color:var(--muted);margin-top:8px}
+  .tagline{color:var(--muted);font-size:14px;margin-top:12px;max-width:430px;margin-left:auto;margin-right:auto}
 
   /* section label */
   .label{
-    font-family:var(--mono);
-    font-size:12px;
-    text-transform:uppercase;
-    letter-spacing:.12em;
-    color:var(--muted);
-    margin:34px 4px 14px;
-    display:flex;align-items:center;gap:8px;
+    font-size:13px;text-transform:uppercase;letter-spacing:.14em;
+    color:var(--accent);font-weight:600;
+    margin:38px 2px 18px;display:flex;align-items:center;gap:10px;
   }
-  .label::before{content:"//";color:var(--accent-dim)}
+  .label::after{content:"";flex:1;height:1px;background:var(--border)}
 
   /* article cards */
   .card{
     display:block;
     background:var(--panel);
     border:1px solid var(--border);
-    border-radius:12px;
-    padding:16px 18px;
-    margin-bottom:12px;
+    border-radius:var(--radius);
+    padding:17px 20px;
+    margin-bottom:14px;
     text-decoration:none;
     color:var(--text);
-    transition:border-color .15s ease,background .15s ease,transform .15s ease;
+    box-shadow:var(--shadow);
+    transition:border-color .3s ease,transform .3s ease;
   }
-  .card:hover{background:var(--panel-hover);border-color:var(--accent-dim);transform:translateY(-1px)}
-  .card-title{font-weight:600;font-size:15px;line-height:1.35}
+  .card:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .card-title{font-weight:600;font-size:15px;line-height:1.4}
   .card-meta{
-    font-family:var(--mono);
-    font-size:12px;
-    color:var(--muted);
-    margin-top:7px;
+    font-size:13px;color:var(--muted);margin-top:8px;
     display:flex;gap:10px;flex-wrap:wrap;align-items:center;
   }
   .pill{
     color:var(--accent);
-    border:1px solid var(--accent-dim);
+    border:1px solid var(--accent);
     border-radius:999px;
-    padding:1px 8px;
-    font-size:11px;
+    padding:1px 9px;
+    font-size:11px;font-weight:500;
   }
 
   /* socials */
@@ -103,27 +92,24 @@
     display:flex;align-items:center;gap:12px;
     background:var(--panel);
     border:1px solid var(--border);
-    border-radius:12px;
+    border-radius:var(--radius);
     padding:14px 16px;
     text-decoration:none;
     color:var(--text);
     font-weight:500;font-size:14px;
-    transition:border-color .15s ease,background .15s ease,transform .15s ease;
+    box-shadow:var(--shadow);
+    transition:border-color .3s ease,transform .3s ease;
   }
-  .social:hover{background:var(--panel-hover);border-color:var(--accent-dim);transform:translateY(-1px)}
+  .social:hover{border-color:var(--accent);transform:translateY(-2px)}
   .social svg{width:20px;height:20px;flex:0 0 20px;fill:currentColor;color:var(--accent)}
   .social span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 
-  footer{text-align:center;margin-top:40px;color:var(--muted);font-family:var(--mono);font-size:12px}
-  footer .blink{color:var(--accent);animation:blink 1.2s steps(2,start) infinite}
-  @keyframes blink{to{visibility:hidden}}
+  footer{text-align:center;margin-top:44px;color:var(--muted);font-size:13px}
 
   @media (max-width:420px){
     .socials{grid-template-columns:1fr}
-    body{padding-top:36px}
+    body{padding-top:40px}
   }
-
-  /* light-mode guard: this page is intentionally dark, but set a sane bg either way */
   @media (prefers-color-scheme: light){ body{background:var(--bg)} }
 </style>
 </head>
@@ -145,14 +131,14 @@
          ============================================================ -->
     <div class="label">Latest writing</div>
 
-     <a class="card" href="https://medium.com/the-ink-home/metasploit-the-basics-tryhackme-walkthrough-daaea08006a8" target="_blank" rel="noopener">
-      <div class="card-title">Metasploit: The Basics — TryHackMe Walkthrough</div>
-      <div class="card-meta"><span class="pill">Featured</span> The Ink Home · Blue-team detection angle</div>
-    </a>
-
     <a class="card" href="https://medium.com/@timiphil9/talking-a-calendar-bot-into-leaking-sales-data-tryhackme-llmborghini-walkthrough-ef35a564851b?sharedUserId=timiphil9" target="_blank" rel="noopener">
       <div class="card-title">Talking a Calendar Bot Into Leaking Sales Data — LLMborghini Walkthrough</div>
-      <div class="card-meta">Medium · LLM prompt-injection</div>
+      <div class="card-meta"><span class="pill">New</span> Medium · LLM prompt-injection</div>
+    </a>
+
+    <a class="card" href="https://medium.com/the-ink-home/metasploit-the-basics-tryhackme-walkthrough-daaea08006a8" target="_blank" rel="noopener">
+      <div class="card-title">Metasploit: The Basics — TryHackMe Walkthrough</div>
+      <div class="card-meta"><span class="pill">Featured</span> The Ink Home · Blue-team detection angle</div>
     </a>
 
     <a class="card" href="https://medium.com/@timiphil9/php2shell-how-a-progress-bar-became-unauthenticated-rce-on-14-years-of-php-b21d90a4fd6b?sharedUserId=timiphil9" target="_blank" rel="noopener">
@@ -213,9 +199,7 @@
 
     </div>
 
-    <footer>
-      timiphil <span class="blink">▋</span>
-    </footer>
+    <footer>© 2026 Rotimi Ishola · Düsseldorf</footer>
 
   </div>
 </body>
