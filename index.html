@@ -750,9 +750,6 @@
       <div class="control control-5" data-id="contact">
         <i class="fa-solid fa-envelope-open" aria-hidden="true"></i>
       </div>
-      <a class="security-link" href="./security.html" title="Security Profile" aria-label="Security Profile">
-       <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
-      </a>
 
     <div class="theme-btn">
       <i class="fas fa-adjust"></i>
@@ -760,5 +757,24 @@
 
 
     <script src="app.js"></script>
+
+   <!-- Security profile button -->
+    <style>
+      .security-link{
+        display:flex; align-items:center; justify-content:center;
+        position:fixed; right:3%; bottom:5%;
+        width:70px; height:70px; border-radius:50%;
+        background-color:var(--color-grey-4);
+        box-shadow:0 3px 15px rgba(0,0,0,.3);
+        cursor:pointer; text-decoration:none; z-index:10;
+        transition:0.1s ease-in-out;
+      }
+      .security-link i{ font-size:1.4rem; color:var(--color-grey-2); pointer-events:none; }
+      .security-link:hover i{ color:var(--color-secondary); }
+      .security-link:active{ transform:translateY(-4px); }
+  </style>
+  <a class="security-link" href="./security.html" title="Security Profile" aria-label="Security Profile">
+  <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+  </a>   
 </body>
 </html>
