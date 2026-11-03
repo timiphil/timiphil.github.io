@@ -758,13 +758,11 @@
 
     <script src="app.js"></script>
 
-    <!-- Security profile button -->
+    <!-- Security button + toggle position fix -->
 <script>
 (function () {
-  // remove any earlier copies so there are no duplicates
+  // --- security profile button ---
   document.querySelectorAll('.security-link').forEach(function (e) { e.remove(); });
-
-  // inject styles once
   if (!document.getElementById('security-link-style')) {
     var st = document.createElement('style');
     st.id = 'security-link-style';
@@ -775,8 +773,6 @@
       '.security-link:active{transform:translateY(-4px);}';
     document.head.appendChild(st);
   }
-
-  // create the button and attach it to the page body (never inside .controls)
   var a = document.createElement('a');
   a.className = 'security-link';
   a.href = './security.html';
@@ -784,8 +780,14 @@
   a.setAttribute('aria-label', 'Security Profile');
   a.innerHTML = '<i class="fa-solid fa-shield-halved" aria-hidden="true"></i>';
   document.body.appendChild(a);
+
+  // --- move the theme toggle out of .controls so it anchors to the screen, not the column ---
+  var tb = document.querySelector('.theme-btn');
+  if (tb && tb.parentElement !== document.body) {
+    document.body.appendChild(tb); // keeps its click handler; stops the overlap
+  }
 })();
-</script>  
+</script>
    
 </body>
 </html>
