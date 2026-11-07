@@ -758,10 +758,9 @@
 
     <script src="app.js"></script>
 
-    <!-- Security button + toggle position fix -->
+<!-- Security button + toggle fix + mobile layout -->
 <script>
 (function () {
-  // --- security profile button ---
   document.querySelectorAll('.security-link').forEach(function (e) { e.remove(); });
   if (!document.getElementById('security-link-style')) {
     var st = document.createElement('style');
@@ -770,7 +769,9 @@
       '.security-link{display:flex;align-items:center;justify-content:center;position:fixed;right:3%;bottom:5%;width:70px;height:70px;border-radius:50%;background-color:var(--color-grey-4);box-shadow:0 3px 15px rgba(0,0,0,.3);cursor:pointer;text-decoration:none;z-index:10;transition:0.1s ease-in-out;}' +
       '.security-link i{font-size:1.4rem;color:var(--color-grey-2);pointer-events:none;}' +
       '.security-link:hover i{color:var(--color-secondary);}' +
-      '.security-link:active{transform:translateY(-4px);}';
+      '.security-link:active{transform:translateY(-4px);}' +
+      '@media (max-width:950px){.security-link{display:none !important;}}' +
+      '@media (max-width:480px){.controls{left:0 !important;right:0 !important;width:100% !important;transform:translateX(0) !important;justify-content:space-around !important;}.controls .control{width:48px !important;height:48px !important;padding:0 !important;margin:0 !important;}.controls .control i{font-size:1.15rem !important;}}';
     document.head.appendChild(st);
   }
   var a = document.createElement('a');
@@ -780,12 +781,8 @@
   a.setAttribute('aria-label', 'Security Profile');
   a.innerHTML = '<i class="fa-solid fa-shield-halved" aria-hidden="true"></i>';
   document.body.appendChild(a);
-
-  // --- move the theme toggle out of .controls so it anchors to the screen, not the column ---
   var tb = document.querySelector('.theme-btn');
-  if (tb && tb.parentElement !== document.body) {
-    document.body.appendChild(tb); // keeps its click handler; stops the overlap
-  }
+  if (tb && tb.parentElement !== document.body) { document.body.appendChild(tb); }
 })();
 </script>
    
