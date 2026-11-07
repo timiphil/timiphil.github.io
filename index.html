@@ -771,7 +771,11 @@
       '.security-link:hover i{color:var(--color-secondary);}' +
       '.security-link:active{transform:translateY(-4px);}' +
       '@media (max-width:950px){.security-link{display:none !important;}}' +
-      '@media (max-width:480px){.controls{left:0 !important;right:0 !important;width:100% !important;transform:translateX(0) !important;justify-content:space-around !important;}.controls .control{width:48px !important;height:48px !important;padding:0 !important;margin:0 !important;}.controls .control i{font-size:1.15rem !important;}}';
+      '@media (max-width:480px){' +
+        '.controls{left:0 !important;right:0 !important;width:100% !important;transform:translateX(0) !important;justify-content:space-evenly !important;}' +
+        '.controls .control,.controls .control.active-btn{width:46px !important;height:46px !important;padding:0 !important;margin:0 !important;}' +
+        '.controls .control i{font-size:1.1rem !important;}' +
+      '}';
     document.head.appendChild(st);
   }
   var a = document.createElement('a');
